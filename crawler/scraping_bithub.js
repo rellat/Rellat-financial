@@ -38,16 +38,13 @@ function crawling () {
     for (var i = 0; i < len; i++) {
       result.push([])
 
-      var row = rows[i].children
+      var cols = rows[i].children
+      var clen = cols.length
 
-      var clen = row.length
       for(var j = 0; j < clen; j++){
-        var col = row[j]
-        result[i].push(col.innerHTML)
+        result[i].push(cols[j].innerHTML)
       }
-
     }
-
     return result
   }).then(function (html) {
     // var table = document.getElementById('chart_tb')
