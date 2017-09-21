@@ -53,5 +53,4 @@ function crawling () {
   })
 }
 
-(new Crawler).start()
-
+module.exports = Crawler
